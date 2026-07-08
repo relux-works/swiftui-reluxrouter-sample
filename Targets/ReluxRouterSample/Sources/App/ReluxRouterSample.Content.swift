@@ -39,7 +39,6 @@ extension ReluxRouterSample {
 
     @MainActor
     struct Content: View {
-        let relux: Relux
         @EnvironmentObject private var router: AppRouter
 
         var body: some View {

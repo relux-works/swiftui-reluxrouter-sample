@@ -56,6 +56,7 @@ let project = Project(
                 .external(name: "SwiftIoC"),
                 .external(name: "Relux"),
                 .external(name: "ReluxRouter"),
+                .external(name: "SwiftUIRelux"),
             ],
             settings: .settings(
                 base: [

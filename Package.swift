@@ -9,6 +9,7 @@ let package = Package(
         .package(path: "Packages/SharedConfig"),
         .package(url: "https://github.com/relux-works/swiftui-reluxrouter.git", from: "12.1.0"),
         .package(name: "SwiftIoC", url: "https://github.com/relux-works/swift-ioc.git", .upToNextMajor(from: "1.0.3")),
+        .package(name: "swiftui-relux", url: "https://github.com/relux-works/swiftui-relux.git", .upToNextMajor(from: "9.0.0")),
     ],
     targets: []
 )
@@ -42,6 +43,8 @@ let packageSettings = PackageSettings(
         "SwiftIoC": .framework,
         "Relux": .framework,
         "ReluxRouter": .framework,
+        "swiftui-relux": .framework,
+        "SwiftUIRelux": .framework,
     ],
     targetSettings: [
         "SharedConfig": swiftPackageTargetSettings,

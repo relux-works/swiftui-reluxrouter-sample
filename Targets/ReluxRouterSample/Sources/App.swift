@@ -1,6 +1,7 @@
 @_exported import Relux
 import SwiftUI
 import SwiftIoC
+import SwiftUIRelux
 
 @main
 struct ReluxRouterSample: App {
@@ -10,28 +11,11 @@ struct ReluxRouterSample: App {
 
     var body: some Scene {
         WindowGroup {
-            Bootstrap()
-        }
-    }
-}
-
-extension ReluxRouterSample {
-    @MainActor
-    struct Bootstrap: View {
-        @State private var relux: Relux?
-
-        var body: some View {
-            Group {
-                if let relux {
-                    Content(relux: relux)
-                        .environmentObject(relux.store.getState(AppRouter.self))
-                } else {
-                    Splash()
-                        .task {
-                            relux = await Registry.resolveAsync(Relux.self)
-                        }
-                }
-            }
+            Relux.Resolver(
+                splash: { ReluxRouterSample.Splash() },
+                content: { _ in ReluxRouterSample.Content() },
+                resolver: { await Registry.resolveAsync(Relux.self) }
+            )
         }
     }
 }
