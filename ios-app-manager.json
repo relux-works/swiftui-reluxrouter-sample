@@ -1,0 +1,17 @@
+{
+  "app_name": "ReluxRouterSample",
+  "bundle_id": "com.reluxworks.reluxroutersample",
+  "team_id": "262RZ595FP",
+  "organization_name": "Relux Works",
+  "marketing_version": "1.0.0",
+  "project_version": "1",
+  "swift_version": "6.2",
+  "min_target": "17.0",
+  "url_scheme": "reluxroutersample",
+  "product_name": "ReluxRouter Sample",
+  "configurations": [
+    "Debug",
+    "Release"
+  ],
+  "modules_path": "Packages"
+}

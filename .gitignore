@@ -1,0 +1,39 @@
+# macOS
+.DS_Store
+
+# Xcode
+*.xcodeproj/
+*.xcworkspace/
+*.pbxproj
+*.xcscheme
+*.xcresult/
+*.dSYM/
+*.app/
+xcuserdata/
+*.xcuserdatad/
+*.xcuserstate
+DerivedData/
+DerivedData*/
+.derived-data-log-*
+build/
+
+# Tuist
+Derived/
+
+# Swift Package Manager
+.build/
+.swiftpm/
+.cache/
+
+# CocoaPods (if used)
+Pods/
+
+# IDE
+.idea/
+*.swp
+
+# Agent-local workspace
+.temp/
+.task-board/
+task-board.config.json
+AGENTS.md
